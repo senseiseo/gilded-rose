@@ -15,7 +15,6 @@ class GildedRose
   AGED_BRIE = "Aged Brie"
   BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert"
   SULFURAS = "Sulfuras, Hand of Ragnaros"
-
   private_constant :AGED_BRIE, :BACKSTAGE_PASSES, :SULFURAS
 
   def def update_item(item)
@@ -24,8 +23,6 @@ class GildedRose
       update_aged_brie(item)
     when BACKSTAGE_PASSES
       update_backstage_passes(item)
-    when SULFURAS
-      update_sulfuras(item)
     else
       update_ordinary_item(item)
     end
@@ -49,10 +46,6 @@ class GildedRose
     else
       increase_quality(item)
     end
-  end
-
-  def update_sulfuras(item)
-   
   end
 
   def update_ordinary_item(item)
@@ -79,52 +72,6 @@ class GildedRose
   def decrease_quality(item, amount = 1)
     item.quality = [item.quality - amount, 0].max
   end
-
-  # def update_item(item)
-  #   if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
-  #     if item.quality > 0
-  #       if item.name != "Sulfuras, Hand of Ragnaros"
-  #         item.quality = item.quality - 1
-  #       end
-  #     end
-  #   else
-  #     if item.quality < 50
-  #       item.quality = item.quality + 1
-  #       if item.name == "Backstage passes to a TAFKAL80ETC concert"
-  #         if item.sell_in < 11
-  #           if item.quality < 50
-  #             item.quality = item.quality + 1
-  #           end
-  #         end
-  #         if item.sell_in < 6
-  #           if item.quality < 50
-  #             item.quality = item.quality + 1
-  #           end
-  #         end
-  #       end
-  #     end
-  #   end
-  #   if item.name != "Sulfuras, Hand of Ragnaros"
-  #     item.sell_in = item.sell_in - 1
-  #   end
-  #   if item.sell_in < 0
-  #     if item.name != "Aged Brie"
-  #       if item.name != "Backstage passes to a TAFKAL80ETC concert"
-  #         if item.quality > 0
-  #           if item.name != "Sulfuras, Hand of Ragnaros"
-  #             item.quality = item.quality - 1
-  #           end
-  #         end
-  #       else
-  #         item.quality = item.quality - item.quality
-  #       end
-  #     else
-  #       if item.quality < 50
-  #         item.quality = item.quality + 1
-  #       end
-  #     end
-  #   end
-  # end
 end
 
 class Item
