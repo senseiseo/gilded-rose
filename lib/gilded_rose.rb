@@ -24,7 +24,7 @@ class GildedRose
       update_aged_brie(item)
     when BACKSTAGE_PASSES
       update_backstage_passes(item)
-    when 
+    when SULFURAS
       update_sulfuras(item)
     else
       update_ordinary_item(item)
