@@ -9,5 +9,24 @@ describe GildedRose do
 
       expect(items[0].name).to eq "foo"
     end
+
+    # создаем разные продукты под разные условия для последующего рефакторинга и чтоб не чего не сломать.
+    it "проверяем работу системы, для последующего рефакторинга, название поменя." do
+      names = [
+        "foo",
+        "Aged Brie",
+        "Backstage passes to a TAFKAL80ETC concert",
+        "Sulfuras, Hand of Ragnaros"
+      ]
+      sell_ins = [-1, 0, 1, 5, 6, 7, 10, 11, 12]
+      qualities = [-1, 0, 1, 49, 50, 51]
+      items = names.product(sell_ins, qualities).map { |name, sell_in, quality|
+        Item.new(name, sell_in, quality)
+      }
+
+      GildedRose.new(items).update_quality
+
+      items.map(&:to_s)
+    end
   end
 end
