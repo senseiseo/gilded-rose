@@ -22,7 +22,7 @@ class GildedRose
   BACKSTAGE_PASSES = 'Backstage passes to a TAFKAL80ETC concert'
   SULFURAS = 'Sulfuras, Hand of Ragnaros'
   CONJURED = 'Conjured'
-  private_constant :AGED_BRIE, :BACKSTAGE_PASSES, :SULFURAS
+  private_constant :AGED_BRIE, :BACKSTAGE_PASSES, :SULFURAS, :CONJURED
 
   def update_item(item)
     item.sell_in -= 1 unless item.name == SULFURAS
