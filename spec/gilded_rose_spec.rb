@@ -27,9 +27,9 @@ describe GildedRose do
 
         result = GildedRose.new(items).update_quality
 
-        expect(result.items.map(&:name)).to match_array(expect_result.map(&:name))
-        expect(result.items.map(&:sell_in)).to match_array(expect_result.map(&:sell_in))
-        expect(result.items.map(&:quality)).to match_array(expect_result.map(&:quality))
+        expect(result.items.map(&:item).map(&:name)).to match_array(expect_result.map(&:name))
+        expect(result.items.map(&:item).map(&:sell_in)).to match_array(expect_result.map(&:sell_in))
+        expect(result.items.map(&:item).map(&:quality)).to match_array(expect_result.map(&:quality))
       end
     end
 
@@ -56,9 +56,9 @@ describe GildedRose do
 
         result = GildedRose.new(items).update_quality
 
-        expect(result.items.map(&:name)).to match_array(expect_result.map(&:name))
-        expect(result.items.map(&:sell_in)).to match_array(expect_result.map(&:sell_in))
-        expect(result.items.map(&:quality)).to match_array(expect_result.map(&:quality))
+        expect(result.items.map(&:item).map(&:name)).to match_array(expect_result.map(&:name))
+        expect(result.items.map(&:item).map(&:sell_in)).to match_array(expect_result.map(&:sell_in))
+        expect(result.items.map(&:item).map(&:quality)).to match_array(expect_result.map(&:quality))
       end
     end
 
@@ -82,9 +82,9 @@ describe GildedRose do
 
         result = GildedRose.new(items).update_quality
 
-        expect(result.items.map(&:name)).to match_array(expect_result.map(&:name))
-        expect(result.items.map(&:sell_in)).to match_array(expect_result.map(&:sell_in))
-        expect(result.items.map(&:quality)).to match_array(expect_result.map(&:quality))
+        expect(result.items.map(&:item).map(&:name)).to match_array(expect_result.map(&:name))
+        expect(result.items.map(&:item).map(&:sell_in)).to match_array(expect_result.map(&:sell_in))
+        expect(result.items.map(&:item).map(&:quality)).to match_array(expect_result.map(&:quality))
       end
     end
 
@@ -108,9 +108,9 @@ describe GildedRose do
 
         result = GildedRose.new(items).update_quality
 
-        expect(result.items.map(&:name)).to match_array(expect_result.map(&:name))
-        expect(result.items.map(&:sell_in)).to match_array(expect_result.map(&:sell_in))
-        expect(result.items.map(&:quality)).to match_array(expect_result.map(&:quality))
+        expect(result.items.map(&:item).map(&:name)).to match_array(expect_result.map(&:name))
+        expect(result.items.map(&:item).map(&:sell_in)).to match_array(expect_result.map(&:sell_in))
+        expect(result.items.map(&:item).map(&:quality)).to match_array(expect_result.map(&:quality))
       end
     end
 
@@ -137,9 +137,9 @@ describe GildedRose do
 
         result = GildedRose.new(items).update_quality
 
-        expect(result.items.map(&:name)).to match_array(expect_result.map(&:name))
-        expect(result.items.map(&:sell_in)).to match_array(expect_result.map(&:sell_in))
-        expect(result.items.map(&:quality)).to match_array(expect_result.map(&:quality))
+        expect(result.items.map(&:item).map(&:name)).to match_array(expect_result.map(&:name))
+        expect(result.items.map(&:item).map(&:sell_in)).to match_array(expect_result.map(&:sell_in))
+        expect(result.items.map(&:item).map(&:quality)).to match_array(expect_result.map(&:quality))
       end
     end
   end
