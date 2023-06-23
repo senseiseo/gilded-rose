@@ -34,3 +34,7 @@
 * Запустите тесты, чтобы убедиться, что все работает корректно:
 
 `rspec`
+
+Ссылки на задачу 
+
+<https://github.com/emilybache/GildedRose-Refactoring-Kata>
