@@ -38,3 +38,4 @@
 Ссылки на задачу 
 
 <https://github.com/emilybache/GildedRose-Refactoring-Kata>
+<https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRoseRequirements_ru.txt>
